@@ -525,7 +525,7 @@ const styles = StyleSheet.create({
     zIndex: 2,
     width: ACTION_BUTTON_SIZE,
     height: ACTION_BUTTON_SIZE,
-    borderRadius: 28,
+    borderRadius: ACTION_BUTTON_SIZE/2,
     alignItems: 'center',
     justifyContent: 'center',
     shadowOpacity: 0.35,
