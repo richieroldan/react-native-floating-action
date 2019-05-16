@@ -18,7 +18,7 @@ import { isIphoneX } from './utils/platform';
 import { getTouchableComponent, getRippleProps } from './utils/touchable';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
-const ACTION_BUTTON_SIZE = 56;
+const ACTION_BUTTON_SIZE = 70;
 
 class FloatingAction extends Component {
   constructor(props) {
