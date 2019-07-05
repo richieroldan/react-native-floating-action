@@ -386,7 +386,7 @@ class FloatingAction extends Component {
   }
 
   renderTappableBackground() {
-    const { overlayColor } = this.props;
+    const { overlayColor, renderOverlay } = this.props;
 
     // TouchableOpacity don't require a child
     return (
@@ -394,7 +394,9 @@ class FloatingAction extends Component {
         activeOpacity={1}
         style={[styles.overlay, { backgroundColor: overlayColor }]}
         onPress={this.handlePressBackdrop}
-      />
+      >
+        {renderOverlay && renderOverlay()}
+      </TouchableOpacity>
     );
   }
 
@@ -459,6 +461,7 @@ FloatingAction.propTypes = {
   mainVerticalDistance: PropTypes.number,
   visible: PropTypes.bool,
   overlayColor: PropTypes.string,
+  renderOverlay: PropTypes.func,
   position: PropTypes.oneOf(['right', 'left', 'center']),
   overrideWithAction: PropTypes.bool, // replace mainAction with first action from actions
   floatingIcon: PropTypes.any,
@@ -486,6 +489,7 @@ FloatingAction.defaultProps = {
   visible: true,
   color: '#1253bc',
   overlayColor: 'rgba(68, 68, 68, 0.6)',
+  renderOverlay: null,
   position: 'right',
   distanceToEdge: 30,
   openOnMount: false,
