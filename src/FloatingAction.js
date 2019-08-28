@@ -639,8 +639,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     overflow: Platform.OS === "ios" ? "visible" : "hidden",
     zIndex: 2,
-    width: ACTION_BUTTON_SIZE,
-    height: ACTION_BUTTON_SIZE,
     borderRadius: 28,
     alignItems: "center",
     justifyContent: "center",
@@ -649,8 +647,6 @@ const styles = StyleSheet.create({
   },
   button: {
     zIndex: 3,
-    width: ACTION_BUTTON_SIZE,
-    height: ACTION_BUTTON_SIZE,
     borderRadius: 28,
     alignItems: "center",
     justifyContent: "center"
@@ -662,8 +658,6 @@ const styles = StyleSheet.create({
   },
   buttonTextContainer: {
     borderRadius: 28,
-    width: ACTION_BUTTON_SIZE,
-    height: ACTION_BUTTON_SIZE,
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
