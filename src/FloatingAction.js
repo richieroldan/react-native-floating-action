@@ -404,7 +404,9 @@ class FloatingAction extends Component {
           styles[`${position}Button`],
           propStyles,
           animatedVisibleView,
-          this.getShadow()
+          this.getShadow(),{
+            borderRadius:size/2
+          }
         ]}
         accessible
         accessibilityLabel="Floating Action Button"
